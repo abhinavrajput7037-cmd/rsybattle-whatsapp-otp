@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: rsybattle-whatsapp-otp
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: node server.js
+    disk:
+      name: wwebjs-auth
+      mountPath: /tmp/wwebjs_auth
+      sizeGB: 1
