@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: rsybattle-whatsapp-otp
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false
+      - key: RENDER_EXTERNAL_URL
+        sync: false
